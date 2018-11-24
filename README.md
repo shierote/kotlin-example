@@ -1,1 +1,1 @@
-# kotlin-example
+# 11/25(日) Kotlinハッカソン

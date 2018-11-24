@@ -8,17 +8,12 @@ buildscript {
 	}
 	repositories {
 		mavenCentral()
+		maven {url 'https://oss.sonatype.org/content/repositories/snapshots/'}
 	}
-	processResources.destinationDir = compileJava.destinationDir
-	compileJava.dependsOn processResources
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
-		classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
-		compile "org.postgresql:postgresql:${postgresqlVersion}"
-		compile "org.seasar.doma.boot:doma-spring-boot-starter:${springBootDomaVersion}"
-		compile "org.seasar.doma:doma:${domaVersion}"
-		
+		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.70")
+		classpath("org.jetbrains.kotlin:kotlin-allopen:1.2.70")
 	}
 }
 
@@ -31,6 +26,7 @@ apply plugin: 'io.spring.dependency-management'
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 compileKotlin {
 	kotlinOptions {
 		freeCompilerArgs = ["-Xjsr305=strict"]
@@ -48,6 +44,9 @@ repositories {
 	mavenCentral()
 }
 
+apply plugin: 'java'
+processResources.destinationDir = compileJava.destinationDir
+compileJava.dependsOn processResources
 
 dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
@@ -57,4 +56,7 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	runtimeOnly('org.springframework.boot:spring-boot-devtools')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	compile "org.postgresql:postgresql:42.1.4"
+	compile "org.seasar.doma:doma:2.19.0"
+	compile "org.seasar.doma.boot:doma-spring-boot-starter:1.1.1"
 }
