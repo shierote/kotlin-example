@@ -1,0 +1,60 @@
+buildscript {
+	ext {
+		kotlinVersion = '1.2.70'
+		springBootVersion = '2.1.0.RELEASE'
+		postgresqlVersion = '42.1.4'
+		springBootDomaVersion = '1.1.1'
+		domaVersion = '2.19.0'
+	}
+	repositories {
+		mavenCentral()
+	}
+	processResources.destinationDir = compileJava.destinationDir
+	compileJava.dependsOn processResources
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
+		classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
+		compile "org.postgresql:postgresql:${postgresqlVersion}"
+		compile "org.seasar.doma.boot:doma-spring-boot-starter:${springBootDomaVersion}"
+		compile "org.seasar.doma:doma:${domaVersion}"
+		
+	}
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'kotlin-spring'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+compileKotlin {
+	kotlinOptions {
+		freeCompilerArgs = ["-Xjsr305=strict"]
+		jvmTarget = "1.8"
+	}
+}
+compileTestKotlin {
+	kotlinOptions {
+		freeCompilerArgs = ["-Xjsr305=strict"]
+		jvmTarget = "1.8"
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
+	implementation('org.springframework.boot:spring-boot-starter-web')
+	implementation('com.fasterxml.jackson.module:jackson-module-kotlin')
+	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	runtimeOnly('org.springframework.boot:spring-boot-devtools')
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
+}
