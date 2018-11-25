@@ -1,6 +1,7 @@
 doma:
   dialect: postgres
+
 spring.datasource.driver-class-name: org.postgresql.Driver
-spring.datasource.url: jdbc:postgresql://192.168.99.100:5432/
+spring.datasource.url: jdbc:postgresql://localhost:5432/kotlindemo
 spring.datasource.username: postgres
 spring.datasource.password:
