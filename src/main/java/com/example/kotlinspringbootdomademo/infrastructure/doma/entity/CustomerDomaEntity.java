@@ -16,7 +16,7 @@ public class CustomerDomaEntity {
 
     public String phone_number;
 
-    public String githube_name;
+    public String github_name;
 
     public String twitter_name;
 

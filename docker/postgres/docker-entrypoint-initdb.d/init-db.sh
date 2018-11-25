@@ -16,13 +16,12 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" kotlindemo <<-EOSQL
         github_name varchar(50),
         twitter_name varchar(50),
         main_org varchar(50),
-        sub_org varchar(50),
-
+        sub_org varchar(50)
     );
 
-    insert into customer(name, email, github_name, twitter_name, main_org, sub_org) values ('hoge', 'hoge@example.com', 'hoge', 'hoge','hoge','hoge');
-    insert into customer(name, email, github_name, twitter_name, main_org, sub_org) values ('fuge', 'fuge@example.com', 'hoge', 'hoge','hoge','hoge');
-    insert into customer(name, email, github_name, twitter_name, main_org, sub_org) values ('piyo', 'piyo@example.com', 'hoge', 'hoge','hoge','hoge');
+    insert into customer(name, email, github_name, twitter_name, main_org, sub_org) values ('hoge', 'hoge@example.com', 'hoge', 'hoge', 'hoge','hoge','hoge');
+    insert into customer(name, email, github_name, twitter_name, main_org, sub_org) values ('fuge', 'fuge@example.com', 'hoge', 'hoge', 'hoge','hoge','hoge');
+    insert into customer(name, email, github_name, twitter_name, main_org, sub_org) values ('piyo', 'piyo@example.com', 'hoge', 'hoge', 'hoge','hoge','hoge');
 
     COMMIT;
 EOSQL

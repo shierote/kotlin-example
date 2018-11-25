@@ -12,10 +12,25 @@
 <form th:method="patch" th:action="@{./}" th:object="${customerInput}">
     氏名: <input type="text" th:field="*{name}" />
     <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
-
-    email: <input type="text" th:field="*{email}" />
+    <br>
+    メールアドレス: <input type="text" th:field="*{email}" />
     <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
-
+    <br>
+    GitHubアカウントの名前: <input type="text" th:field="*{github_name}" />
+    <p th:if="${#fields.hasErrors('github_name')}" th:errors="*{github_name}"></p>
+    <br>
+    Twitterアカウントの名前: <input type="text" th:field="*{twitter_name}" />
+    <p th:if="${#fields.hasErrors('twitter_name')}" th:errors="*{twitter_name}"></p>
+    <br>
+    電話番号: <input type="text" th:field="*{phone_number}" />
+    <p th:if="${#fields.hasErrors('phone_number')}" th:errors="*{phone_number}"></p>
+    <br>
+    メインの所属組織（例：大学）: <input type="text" th:field="*{main_org}" />
+    <p th:if="${#fields.hasErrors('main_org')}" th:errors="*{main_org}"></p>
+    <br>
+    サブの所属組織（例：サークル、インターン先）: <input type="text" th:field="*{sub_org}" />
+    <p th:if="${#fields.hasErrors('sub_org')}" th:errors="*{sub_org}"></p>
+    <br>
     <input type="submit" value="編集" />
     <a href="javascript:void(0);" onclick="window.history.back();">戻る</a>
 </form>
