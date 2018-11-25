@@ -1,3 +1,104 @@
+:root {
+    --mcolor: #C12B2B;
+    --bcolor: #150E0E;
+    --fcolor: #FFFFFF;
+}
+
 body {
-    background-color: red;
+    font-family: "Noto Sans";
+    background-color: var(--bcolor);
+    color: var(--fcolor);
+}
+
+.new-btn {
+    position: fixed;
+    bottom: 82px;
+    right: 82px;
+    border-radius: 75px;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: var(--mcolor);
+    text-align: center;
+    line-height: 150px;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--fcolor);
+}
+
+.container {
+    height: 678px;
+    border: 19px var(--fcolor) solid;
+    margin: 24px;
+}
+
+.index-title {
+    margin: 40px;
+
+}
+
+li {
+    list-style-type: none;
+}
+li::before {
+    display: inline-block;
+
+    width: 32px;
+    height: 32px;
+
+    content: '';
+
+    border-radius: 100%;
+    background: var(--fcolor);
+}
+
+.customer-name {
+    font-size: 28px;
+    color: var(--fcolor);
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    left: 6px;
+    top: -5px
+}
+
+.customer-edit {
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--fcolor);
+    height: 32px;
+    line-height: 33px;
+    width: 80px;
+    position: absolute;
+    left: 270px;
+    color: var(--bcolor);
+    font-weight: bold;
+    text-align: center;
+    font-size: 13px;
+}
+
+.customer-delete {
+    position: relative;
+    top: -42px;
+    left: 275px;
+    background-color: var(--mcolor);
+    border: 0;
+    height: 34px;
+    line-height: 32px;
+    width: 80px;
+    font-weight: bold;
+    color: var(--fcolor);
+    font-size: 13px;
+}
+
+.hello-title{
+    font-size: 60px;
+    position: relative;
+    margin: 0 auto;
+    top: 312px;
+    text-decoration: none;
+    color: var(--fcolor);
+    margin-left: 480px;
+    font-weight: bold;
 }

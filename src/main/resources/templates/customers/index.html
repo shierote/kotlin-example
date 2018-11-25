@@ -6,16 +6,22 @@
     <link th:href="@{/css/app.css}" rel="stylesheet" />
 </head>
 <body>
-<h1>顧客一覧</h1>
+<div class="container">
+    <div class="index-wrapper">
+        <h1 class="index-title">プロフィール一覧</h1>
 <ul th:unless="${customers.isEmpty()}">
     <li th:each="customer: ${customers}">
-        <span th:text="${customer.id}"></span>
-        <span th:text="${customer.name}"></span>
+        <!--<a th:text="${customer.id}" th:href="@{/__${customer.id}__}"></a>-->
+        <a th:text="${customer.name}" th:href="@{/customers/__${customer.id}__}" class="customer-name"></a>
+        <a th:href="@{/customers/__${customer.id}__/edit}" class="customer-edit">編集</a>
         <form th:object="${customer}" th:action="@{/customers/__${customer.id}__}" th:method="delete">
-            <input type="submit" value="削除" />
+            <input type="submit" value="削除" class="customer-delete"/>
         </form>
-        <span th:text="${customer.email}"></span>
+        <!--<span th:text="${customer.email}"></span>-->
     </li>
 </ul>
+    <a th:href="@{/customers/new}" th:class="new-btn">作成</a>
+    </div>
+</div>
 </body>
 </html>

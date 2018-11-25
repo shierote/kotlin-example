@@ -6,6 +6,7 @@
     <link th:href="@{/css/app.css}" rel="stylesheet" />
 </head>
 <body>
-<h1 th:text="${message}"></h1>
+<div class="container">
+<a th:class="hello-title" th:text="${message}" th:href="@{/customers}"></a>
 </body>
 </html>

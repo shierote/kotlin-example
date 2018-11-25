@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping
 class HomeController {
     @GetMapping("")
     fun index(model: Model): String {
-        model.addAttribute("message", "hello Kotlin!")
+        model.addAttribute("message", "Hello Kotlin!")
         return "home"
         }
 }

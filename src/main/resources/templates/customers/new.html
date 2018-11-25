@@ -6,7 +6,9 @@
     <link th:href="@{/css/app.css}" rel="stylesheet" />
 </head>
 <body>
-<h1>顧客作成</h1>
+<div class="container">
+    <div class="index-wrapper">
+    <h1 class="index-title">プロフィール作成</h1>
 <form th:method="post" th:action="@{./}" th:object="${customerInput}">
     氏名: <input type="text" th:field="*{name}" />
     <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
@@ -15,6 +17,9 @@
     <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
 
     <input type="submit" value="作成" />
+    <a href="javascript:void(0);" onclick="window.history.back();">戻る</a>
 </form>
+</div>
+</div>
 </body>
 </html>
