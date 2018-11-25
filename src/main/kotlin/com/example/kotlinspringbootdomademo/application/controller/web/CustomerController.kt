@@ -61,7 +61,11 @@ class CustomerController(
 
         customerInput.name = customer.name
         customerInput.email = customer.email
-
+        customerInput.phone_number = customer.phone_number
+        customerInput.github_name = customer.github_name
+        customerInput.twitter_name = customer.twitter_name
+        customerInput.main_org = customer.main_org
+        customerInput.sub_org = customer.sub_org
         return "customers/edit"
     }
 

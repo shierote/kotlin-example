@@ -13,4 +13,14 @@ public class CustomerDomaEntity {
     public String name;
 
     public String email;
+
+    public String phone_number;
+
+    public String githube_name;
+
+    public String twitter_name;
+
+    public String main_org;
+
+    public String sub_org;
 }

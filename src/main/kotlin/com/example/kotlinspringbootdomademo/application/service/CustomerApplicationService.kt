@@ -23,7 +23,12 @@ class CustomerApplicationService(
     fun create(customerInput: CustomerInput): Int {
         val customer = Customer(
                 name = customerInput.name!!,
-                email = customerInput.email!!
+                email = customerInput.email!!,
+                phone_number = customerInput.phone_number!!,
+                github_name = customerInput.github_name!!,
+                twitter_name = customerInput.twitter_name!!,
+                main_org = customerInput.main_org!!,
+                sub_org = customerInput.sub_org!!
         )
 
         return customerRepository.create(customer)
@@ -34,7 +39,12 @@ class CustomerApplicationService(
 
         val customer = existingCustomer.copy(
                 name = customerInput.name!!,
-                email = customerInput.email!!
+                email = customerInput.email!!,
+                phone_number = customerInput.phone_number!!,
+                github_name = customerInput.github_name!!,
+                twitter_name = customerInput.twitter_name!!,
+                main_org = customerInput.main_org!!,
+                sub_org = customerInput.sub_org!!
         )
 
         customerRepository.update(customer)

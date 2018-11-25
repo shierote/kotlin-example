@@ -2,6 +2,7 @@
     --mcolor: #C12B2B;
     --bcolor: #150E0E;
     --fcolor: #FFFFFF;
+    --scolor: #707070;
 }
 
 body {
@@ -20,7 +21,6 @@ body {
     height: 150px;
     background-color: var(--mcolor);
     text-align: center;
-    line-height: 150px;
     font-size: 40px;
     font-weight: bold;
     text-decoration: none;
@@ -29,6 +29,7 @@ body {
 
 .container {
     height: 678px;
+    line-height: 150px;
     border: 19px var(--fcolor) solid;
     margin: 24px;
 }
@@ -102,3 +103,155 @@ li::before {
     margin-left: 480px;
     font-weight: bold;
 }
+
+.name-card-wrapper{
+    position: relative;
+}
+
+.name-card {
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 610px;
+    height: 368px;
+    background-color: var(--fcolor);
+    color: var(--bcolor);
+}
+
+.main-contents {
+    width: 241px;
+    border-top: 368px solid var(--mcolor);
+    border-right: 157px solid transparent;
+    height: 0;
+}
+
+.sub-contents {
+    position: absolute;
+    top: 242px;
+    left: 266px;
+    width: 0px;
+    border-bottom: 126px solid var(--scolor);
+    border-right: 145px solid transparent;
+    border-left: 55px solid transparent;
+    height: 0;
+}
+
+.main-orb {
+    float: left;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--bcolor);
+}
+
+.name {
+    float: left;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    font-size: 42px;
+    font-weight: bold;
+    color: var(--bcolor);
+}
+
+.sub-org {
+    float: left;
+    position: absolute;
+    top: 242px;
+    right: 20px;
+    color: var(--bcolor);
+}
+
+.phone_number {
+    float: right;
+    position: absolute;
+    color: var(--fcolor);
+    top: 0;
+    left: 80px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.fa-phone {
+    position: absolute;
+    top: 60px;
+    left: 36px;
+    font-size: 32px;
+    color: var(--fcolor);
+}
+
+.email {
+    float: right;
+    position: absolute;
+    color: var(--fcolor);
+    top: 69px;
+    left: 80px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.fa-envelope {
+    position: absolute;
+    top: 128px;
+    left: 36px;
+    font-size: 32px;
+    color: var(--fcolor);
+}
+
+.github-name {
+    float: right;
+    position: absolute;
+    color: var(--fcolor);
+    top: 140px;
+    font-size: 24px;
+    font-weight: bold;
+    left: 80px;
+}
+
+.fa-github {
+    position: absolute;
+    top: 200px;
+    left: 36px;
+    font-size: 32px;
+    color: var(--fcolor);
+}
+
+.twitter-name {
+    float: right;
+    position: absolute;
+    color: var(--fcolor);
+    top: 220px;
+    left: 80px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.fa-twitter {
+    position: absolute;
+    top: 280px;
+    left: 36px;
+    font-size: 32px;
+    color: var(--fcolor);
+}
+
+.show-back-btn {
+    display: inline-block;
+    position: absolute;
+    bottom: 115px;
+    text-align: center;
+    left: 650px;
+    width: 120px;
+    line-height: 50px;
+    height: 50px;
+    text-decoration: none;
+    color: var(--fcolor);
+    font-weight: bold;
+    background-color: var(--mcolor);
+}
+/*.sub-contents {*/
+    /*width: 120px;*/
+    /*border-bottom: 80px solid orange;*/
+    /*border-left: 20px solid transparent;*/
+    /*border-right: 20px solid transparent;*/
+    /*height: 0;*/
+/*}*/
