@@ -1,4 +1,4 @@
-# 11/25(日) Kotlinハッカソン
+# サーバサイドKotlinチュートリアル
 1. IntelliJ IDEAでダウンロードしたファイルをOpen
 2. Dockerがインストールされてなければインストール
 https://www.docker.com
