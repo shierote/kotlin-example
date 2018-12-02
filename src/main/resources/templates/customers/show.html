@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
-    <title>Title</title>
+    <title>名刺作成アプリ</title>
     <link th:href="@{/css/app.css}" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 </head>
@@ -14,16 +14,16 @@
     <div class="name-card">
         <div class="main-contents"></div>
         <div class="sub-contents"></div>
-        <div class="main-orb">東京大学後期教養学部</div>
-        <div class="name">江口 大志</div>
-        <div class="sub-org">zozoテクノロジーズ</div>
-        <i class="fas fa-phone fa-flip-horizontal"></i><div class="phone_number">080 2212 2297</div>
-        <i class="fas fa-envelope"></i><div class="email">taishi2060@gmail.com</div>
-        <i class="fab fa-github"></i><div class="github-name">shierote</div>
-        <i class="fab fa-twitter"></i><div class="twitter-name">シエロ</div>
+        <div class="main-orb" th:text="${customer.main_org}"></div>
+        <div class="name" th:text="${customer.name}"></div>
+        <div class="sub-org" th:text="${customer.sub_org}"></div>
+        <i class="fas fa-phone fa-flip-horizontal"></i><div class="phone_number" th:text="${customer.phone_number}"></div>
+        <i class="fas fa-envelope"></i><div class="email" th:text="${customer.email}"></div>
+        <i class="fab fa-github"></i><div class="github-name" th:text="${customer.github_name}"></div>
+        <i class="fab fa-twitter"></i><div class="twitter-name" th:text="${customer.twitter_name}"></div>
     </div>
     </div>
-<a class="show-back-btn" href="javascript:void(0);" onclick="window.history.back();">戻る</a>
+<a class="show-back-btn" th:href="@{/customers}">戻る</a>
 </div>
 </body>
 </html>

@@ -2,39 +2,45 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
-    <title>Title</title>
+    <title>名刺作成アプリ</title>
     <link th:href="@{/css/app.css}" rel="stylesheet" />
 </head>
 <body>
 <div class="container">
     <div class="index-wrapper">
-    <h1 class="index-title">プロフィール作成</h1>
-<form th:method="post" th:action="@{./}" th:object="${customerInput}">
-    氏名: <input type="text" th:field="*{name}" />
-    <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
-    <br>
-    メールアドレス: <input type="text" th:field="*{email}" />
-    <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
-    <br>
-    GitHubアカウントの名前: <input type="text" th:field="*{github_name}" />
-    <p th:if="${#fields.hasErrors('github_name')}" th:errors="*{github_name}"></p>
-    <br>
-    Twitterアカウントの名前: <input type="text" th:field="*{twitter_name}" />
-    <p th:if="${#fields.hasErrors('twitter_name')}" th:errors="*{twitter_name}"></p>
-    <br>
-    電話番号: <input type="text" th:field="*{phone_number}" />
-    <p th:if="${#fields.hasErrors('phone_number')}" th:errors="*{phone_number}"></p>
-    <br>
-    メインの所属組織（例：大学）: <input type="text" th:field="*{main_org}" />
-    <p th:if="${#fields.hasErrors('main_org')}" th:errors="*{main_org}"></p>
-    <br>
-    サブの所属組織（例：サークル、インターン先）: <input type="text" th:field="*{sub_org}" />
-    <p th:if="${#fields.hasErrors('sub_org')}" th:errors="*{sub_org}"></p>
-    <br>
-    <input type="submit" value="作成" />
-    <a href="javascript:void(0);" onclick="window.history.back();">戻る</a>
-</form>
-</div>
+        <h1 class="index-title">プロフィール作成</h1>
+        <form th:method="post" th:action="@{./}" th:object="${customerInput}" class="form-wrapper">
+            <div class="form-right">
+                <li class="form-name form-li"><span class="form-li-span">氏名</span></li><input type="text" th:field="*{name}" class="each-form" autocomplete="off"/>
+                <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+
+                <li class="form-email form-li"><span class="form-li-span">メールアドレス</span></li><input type="text" th:field="*{email}" class="each-form" autocomplete="off"/>
+                <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+
+                <li class="form-main-org form-li"><span class="form-li-span">メインの所属組織</span></li><input type="text" th:field="*{main_org}" class="each-form" autocomplete="off"/>
+                <p th:if="${#fields.hasErrors('main_org')}" th:errors="*{main_org}"></p>
+
+                <li class="form-sub-org form-li"><span class="form-li-span">サブの所属組織</span></li><input type="text" th:field="*{sub_org}" class="each-form" autocomplete="off"/>
+                <p th:if="${#fields.hasErrors('sub_org')}" th:errors="*{sub_org}"></p>
+
+
+            </div>
+
+            <div class="form-left">
+                <li class="form-phone-name form-li"><span class="form-li-span">電話番号</span></li><input type="text" th:field="*{phone_number}" class="each-form" autocomplete="off"/>
+                <p th:if="${#fields.hasErrors('phone_number')}" th:errors="*{phone_number}"></p>
+
+                <li class="form-github-name form-li"><span class="form-li-span">GitHubの名前</span></li><input type="text" th:field="*{github_name}" class="each-form" autocomplete="off"/>
+                <p th:if="${#fields.hasErrors('github_name')}" th:errors="*{github_name}"></p>
+
+                <li class="form-twitter-name form-li"><span class="form-li-span">Twitterの名前</span></li><input type="text" th:field="*{twitter_name}" class="each-form" autocomplete="off"/>
+                <p th:if="${#fields.hasErrors('twitter_name')}" th:errors="*{twitter_name}"></p>
+
+                <input type="submit" value="作成" class="form-submit-btn"/>
+                <a class="show-back-btn form-back-btn" href="javascript:void(0);" onclick="window.history.back();">戻る</a>
+            </div>
+        </form>
+    </div>
 </div>
 </body>
 </html>
