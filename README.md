@@ -1,4 +1,4 @@
-# サーバサイドKotlinチュートリアル
+# サーバサイドKotlin入門
 1. IntelliJ IDEAでダウンロードしたファイルをOpen
 2. Dockerがインストールされてなければインストール
 https://www.docker.com
