@@ -34,7 +34,6 @@ class CustomerRepositoryDomaImpl(
         customerDomaDao.delete(domaEntity)
     }
 
-    // ここでDomaのEntity（Java）をドメインのModel（Kotlin）に詰め替える
     private fun _mapToModel(domaEntity: CustomerDomaEntity): Customer {
         return Customer(
                 id = domaEntity.id,
@@ -48,7 +47,6 @@ class CustomerRepositoryDomaImpl(
         )
     }
 
-    // ここでドメインのModel（Kotlin）をDomaのEntity（Java）をに詰め替える
     private fun _mapToDomaEntity(customer: Customer): CustomerDomaEntity {
         return CustomerDomaEntity().also {
             it.id = customer.id
