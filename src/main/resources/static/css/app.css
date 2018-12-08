@@ -50,6 +50,7 @@ li {
     list-style-type: none;
     height: 70px;
 }
+
 li::before {
     display: inline-block;
 
@@ -258,13 +259,6 @@ li::before {
     font-weight: bold;
     background-color: var(--fcolor);
 }
-/*.sub-contents {*/
-    /*width: 120px;*/
-    /*border-bottom: 80px solid orange;*/
-    /*border-left: 20px solid transparent;*/
-    /*border-right: 20px solid transparent;*/
-    /*height: 0;*/
-/*}*/
 
 .form-wrapper {
     margin: 0 40px 0 40px;
